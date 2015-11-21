@@ -15,21 +15,22 @@ def print_message(op, message):
     if op:
         print encode(message)
     else:
-        print decode (message)
+        print decode(message)
 
 
 def prompt():
     operation = raw_input("Do you want to encode or decode a message?\na) encode\nb) decode\n")
+    global op
+    global message
     if operation.lower() == "a":
-        op = True
-        message = raw_input("Enter message to encode: ")
+        print_message(True, raw_input("Enter message to encode: "))
     elif operation.lower() == "b":
-        op = False
-        message = raw_input("Enter message to decode: ")
+        print_message(False, raw_input("Enter message to decode: "))
+        print_message(op, message)
     else:
         print "Input unrecognized, try again!"
         prompt()
-    print_message(op, message)
+
 
 prompt()
 
