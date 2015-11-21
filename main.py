@@ -1,5 +1,9 @@
+import re
+
+
 def encode(regular_message):
-    return
+    regular_message = re.sub("[\W\d_]+", "", regular_message.strip()).lower()
+    return regular_message
 
 
 def decode(encrypted_message):
@@ -8,7 +12,7 @@ def decode(encrypted_message):
 
 def print_message(op, message):
     #op true = encode, op false = fasle
-    if op == True:
+    if op:
         print encode(message)
     else:
         print decode (message)
@@ -34,3 +38,4 @@ prompt()
 
 
 
+#print encode("sWWWWj423!!@@@_[]()&^%$#@JMNHBGVFHRTNYJTMYRT~!@#$^*)8&^%$&<><>,,.,.765434kl~>>>*&grffeytr")
