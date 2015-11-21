@@ -1,11 +1,14 @@
+def prompt():
+    print "prompt"
 
-def stef():
-    return "A"
+prompt()
 
-def steve():
-    return "B"
+def encode(regular_message):
+    return
 
-def combine():
-    print "\nStef says: " + stef() + "\nSteve says: " + steve()
+def decode(encrypted_message):
+    return
 
-combine()
+def print_message(op, message):
+    print
+
